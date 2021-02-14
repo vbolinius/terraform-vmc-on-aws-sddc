@@ -16,7 +16,7 @@ SDDC:
 VMC Provider
 ===================================================*/
 
-provider "vmc" {
+provider "terraform-providers/vmc" {
   refresh_token	= var.api_token
   org_id = var.org_id
 }
