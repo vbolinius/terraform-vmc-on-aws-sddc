@@ -1,5 +1,5 @@
 provider "vmc" {
-  refresh_token = var.api_token
+  refresh_token = var.vmc_token
   org_id        = var.org_id
 }
 
