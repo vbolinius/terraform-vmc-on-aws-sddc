@@ -22,12 +22,12 @@ resource "vmc_sddc" "sddc_1" {
     }
   sddc_name           = "Vern_SDDC"
   vpc_cidr            = var.sddc_mgmt_subnet
-  num_host            = 4
+  num_host            = 3
   provider_type       = "ZEROCLOUD"
   region              = data.vmc_customer_subnets.my_subnets.region
   vxlan_subnet        = var.sddc_default
-  delay_account_link  = true
-  skip_creating_vxlan = true
+  delay_account_link  = false
+  skip_creating_vxlan = false
   sso_domain          = "vmc.local"
   host_instance_type  = "I3_METAL"
   # sddc_type           = ""
