@@ -31,6 +31,10 @@ resource "vmc_sddc" "sddc_1" {
   sso_domain          = "vmc.local"
   host_instance_type  = "I3_METAL"
   sddc_type           = "1NODE"
+  account_link_sddc_config {
+    customer_subnet_ids  = [data.vmc_customer_subnets.my_subnets.ids[0]]
+    connected_account_id = data.vmc_connected_accounts.my_accounts.id
+  }
   # sddc_template_id = ""
   deployment_type = "SingleAZ"
   timeouts {
