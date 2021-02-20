@@ -13,7 +13,7 @@ variable "sddc_name" {
 }
 variable "sddc_region" {
   description = "The AWS region."
-  default     = "EU_NORTH_1"
+  default     = "EU_WEST_2"
 }
 variable "sddc_mgmt_subnet" {
   default = "10.2.0.0/16"
@@ -21,9 +21,9 @@ variable "sddc_mgmt_subnet" {
 
 variable "vpc_cidr" {
   description = "AWS VPC IP range. Only prefix of 16 or 20 is currently supported."
-  default     = "172.31.0.0/20"
+  default     = "172.30.0.0/16"
 }
 variable "sddc_default" {
   description = "VXLAN IP subnet in CIDR for compute gateway."
-  default     = "10.10.10.0/23"
+  default     = "192.168.1.0/24"
 }
