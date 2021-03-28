@@ -23,7 +23,7 @@ resource "vmc_sddc" "sddc_1" {
   sddc_name           = "Vern_SDDC"
   vpc_cidr            = var.sddc_mgmt_subnet
   num_host            = 1
-  provider_type       = "AWS"
+  provider_type       = "ZEROCLOUD"
   region              = data.vmc_customer_subnets.my_subnets.region
   vxlan_subnet        = var.sddc_default
   delay_account_link  = false
